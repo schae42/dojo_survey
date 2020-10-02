@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <form action='/result' method='POST'>
+        {% csrf_token %}
+        <p>
+        <label for='name'>Your Name: </label>
+        <input type="text" name="name">
+        </p>
+        <p>
+        <label for='location'>Dojo Location: </label>
+        <select name='location'>
+            <option value='San Jose'>San Jose</option>
+            <option value='Los Angeles'>Los Angeles</option>
+            <option value='Seattle'>Seattle</option>
+        </select>
+        </p>
+        <p>
+        <label for='language'>Favorite Language: </label>
+        <select name='language'>
+            <option value='Python'>Python</option>
+            <option value='JavaScript'>JavaScript</option>
+            <option value='HTML'>HTML</option>
+        </select>
+        </p>
+        <p>
+        <label for='comment'>Comment (optional): </label>
+        <textarea name='comment'></textarea>
+        <input type="submit" name="submit" value='Submit'>
+        </p>
+    </form>
+</body>
+</html>
